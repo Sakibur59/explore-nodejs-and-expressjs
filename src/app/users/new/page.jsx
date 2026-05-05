@@ -14,9 +14,17 @@ import {
 } from "@heroui/react";
 
 const NewUserPage = () => {
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const newUsers = Object.fromEntries(formData.entries());
+    console.log("new user data", newUsers);
+
+    
+  };
   return (
     <div>
-      <Form className="w-full max-w-96" >
+      <Form className="w-full max-w-96" onSubmit={onSubmit}>
         <Fieldset>
           <Fieldset.Legend>Profile Settings</Fieldset.Legend>
           <Description>Update your profile information.</Description>
@@ -40,26 +48,11 @@ const NewUserPage = () => {
               <Input placeholder="john@example.com" />
               <FieldError />
             </TextField>
-            <TextField
-              isRequired
-              name="bio"
-              validate={(value) => {
-                if (value.length < 10) {
-                  return "Bio must be at least 10 characters";
-                }
-                return null;
-              }}
-            >
-              <Label>Bio</Label>
-              <TextArea placeholder="Tell us about yourself..." />
-              <Description>Minimum 10 characters</Description>
-              <FieldError />
-            </TextField>
           </FieldGroup>
           <Fieldset.Actions>
             <Button type="submit">
               <FloppyDisk />
-              Save changes
+              Create User
             </Button>
             <Button type="reset" variant="secondary">
               Cancel

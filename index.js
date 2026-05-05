@@ -31,13 +31,16 @@ app.get("/career", (req, res) => {
   res.send("Career");
 });
 const users = [
-    { id: 1, name: "Fardin", email: "fardin@gmail.com" },
-    { id: 2, name: "khan", email: "khan@gmail.com" },
-    { id: 3, name: "Jannat", email: "jannat@gmail.com" }
-    
+  { id: 1, name: "Fardin", email: "fardin@gmail.com" },
+  { id: 2, name: "khan", email: "khan@gmail.com" },
+  { id: 3, name: "Jannat", email: "jannat@gmail.com" },
 ];
 app.get("/users", (req, res) => {
   res.send(users);
+});
+app.post("/users", (res, req) => {
+  console.log("post method is working");
+  res.send("post method is working");
 });
 app.listen(port, () => {
   console.log(`Server running on ${port}`);
