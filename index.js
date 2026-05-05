@@ -19,7 +19,12 @@
 
 const express = require("express");
 const app = express();
+const cors = require("cors");
 const port = process.env.PORT || 8000;
+
+//middleware
+app.use(cors());
+app.use(express.json());
 
 app.get("/", (req, res) => {
   res.send("hello from Express js");
@@ -38,9 +43,15 @@ const users = [
 app.get("/users", (req, res) => {
   res.send(users);
 });
-app.post("/users", (res, req) => {
-  console.log("post method is working");
-  res.send("post method is working");
+app.post("/users", (req, res) => {
+  console.log("🔥 HIT POST /users");
+  console.log("BODY:", req.body);
+
+  const newUser = req.body;
+  newUser.id = users.length + 1;
+  users.push(newUser);
+
+  res.json(newUser);
 });
 app.listen(port, () => {
   console.log(`Server running on ${port}`);
