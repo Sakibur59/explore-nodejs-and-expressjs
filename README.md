@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ExpressJS Data Fetching
 
-## Getting Started
+A simple project to explore basic backend development using Node.js and Express.js. This project demonstrates how to create a server and fetch data using API routes.
 
-First, run the development server:
+## Features
+
+* Basic Express.js server setup
+* Simple API creation
+* Data fetching example
+* Node.js backend practice
+* Beginner-friendly project structure
+
+## Technologies Used
+
+* Node.js
+* Express.js
+* JavaScript
+
+## Installation
+
+1. Clone the repository:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <your-repository-link>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Go to the project folder:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```bash
+cd expressjs-data-fetching
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. Install dependencies:
 
-## Learn More
+```bash
+npm install
+```
 
-To learn more about Next.js, take a look at the following resources:
+4. Start the server:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Usage
 
-## Deploy on Vercel
+* Run the server locally
+* Open the browser or API client
+* Fetch data from the API endpoint
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Example:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+http://localhost:3000
+```
+
+## Learning Goals
+
+This project helps beginners understand:
+
+* How Express.js works
+* How to create a backend server
+* How to fetch and serve data
+* Basic API handling with Node.js
+
+## Author
+
+Md Sakibur Rahman
